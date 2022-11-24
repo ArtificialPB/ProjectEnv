@@ -14,7 +14,7 @@ import com.intellij.ui.content.ContentFactory
 class WindowFactory : ToolWindowFactory, DumbAware {
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
         val toolWindowPanel = ToolWindowPanel(project)
-        val content = ContentFactory.SERVICE.getInstance().createContent(toolWindowPanel.component, null, false)
+        val content = ContentFactory.getInstance().createContent(toolWindowPanel.component, null, false)
         toolWindow.contentManager.addContent(content)
 
         if (toolWindow is ToolWindowEx) {
